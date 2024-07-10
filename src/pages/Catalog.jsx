@@ -120,18 +120,33 @@ function Catalog() {
       </div>
 
       {/* Section 3 */}
-      <div className=" mx-auto box-content w-full max-w-maxContentTab px-4 py-12 lg:max-w-maxContent">
+      {/* <div className=" mx-auto box-content w-full max-w-maxContentTab px-4 py-12 lg:max-w-maxContent">
         <div className="section_heading">Frequently Bought</div>
         <div className="py-8">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             {catalogPageData?.data?.mostSellingCourses
               ?.slice(0, 4)
               .map((course, i) => (
-                <Course_Card course={course} key={i} Height={"h-[400px]"} />
+                <Course_Card course={course} key={i} Height={"h-[300px]"} />
               ))}
           </div>
         </div>
-      </div>
+      </div> */}
+     
+     <div className="mx-auto w-full max-w-6xl px-4 py-12">
+  <div className="text-3xl font-bold text-center text-gray-800 mb-8">
+    Frequently Bought
+  </div>
+  <div className="py-8">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {catalogPageData?.data?.mostSellingCourses
+        ?.slice(0, 4)
+        .map((course, i) => (
+          <Course_Card course={course} key={i} />
+        ))}
+    </div>
+  </div>
+</div>
 
       <Footer />
     </>
